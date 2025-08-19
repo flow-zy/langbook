@@ -1,19 +1,16 @@
 import { sidebar } from "vuepress-theme-hope";
 
 export default sidebar({
-  "/": [
-    // 根目录侧边栏配置
-  ],
   "/categories/frontend/web/": [
     {
       text: "Web 前端开发",
       icon: "arcticons:es-de-frontend",
       prefix: "/categories/frontend/web/",
       children: [
-            { text: "HTML",icon:'picon:html', link: "html" },
-            { text: "CSS",icon:'material-icon-theme:css', link: "css" },  
-            { text: "JavaScript",icon:'ri:javascript-line', link: "javascript" },
-            { text: "TypeScript",icon:'proicons:typescript', link: "typescript" }
+        { text: "HTML",icon:'picon:html', link: "html" },
+        { text: "CSS",icon:'material-icon-theme:css', link: "css" },  
+        { text: "JavaScript",icon:'ri:javascript-line', link: "javascript" },
+        { text: "TypeScript",icon:'proicons:typescript', link: "typescript" }
       ]
     }
   ]
