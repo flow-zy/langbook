@@ -2,25 +2,19 @@ import { sidebar } from "vuepress-theme-hope";
 
 export default sidebar({
   "/": [
-    "",
-    "portfolio",
-    {
-      text: "案例",
-      icon: "laptop-code",
-      prefix: "demo/",
-      link: "demo/",
-      children: "structure",
-    },
-    {
-      text: "文档",
-      icon: "book",
-      prefix: "guide/",
-      children: "structure",
-    },
-    {
-      text: "幻灯片",
-      icon: "person-chalkboard",
-      link: "https://ecosystem.vuejs.press/zh/plugins/markdown/revealjs/demo.html",
-    },
+    // 根目录侧边栏配置
   ],
+  "/categories/frontend/web/": [
+    {
+      text: "Web 前端开发",
+      icon: "arcticons:es-de-frontend",
+      prefix: "/categories/frontend/web/",
+      children: [
+            { text: "HTML",icon:'picon:html', link: "html" },
+            { text: "CSS",icon:'material-icon-theme:css', link: "css" },  
+            { text: "JavaScript",icon:'ri:javascript-line', link: "javascript" },
+            { text: "TypeScript",icon:'proicons:typescript', link: "typescript" }
+      ]
+    }
+  ]
 });

@@ -1,40 +1,41 @@
 import { navbar } from "vuepress-theme-hope";
 
 export default navbar([
-  "/",
   {
-    text: "指南",
-    icon: "lightbulb",
-    prefix: "/guide/",
-    children: [
-      {
-        text: "基础",
-        icon: "lightbulb",
-        prefix: "basics/",
-        children: ["installation", "configuration", { text: "...", icon: "ellipsis", link: "" }],
-      },
-      {
-        text: "高级",
-        icon: "lightbulb",
-        prefix: "advanced/",
-        children: ["seo", "pwa", { text: "...", icon: "ellipsis", link: "" }],
-      },
-    ],
-  },
-  "/demo/",
-  "/portfolio",
-  {
-    text: "资源",
-    icon: "database",
-    children: [
-      { text: "API 参考", link: "/api/" },
-      { text: "常见问题", link: "/faq/" },
-      { text: "社区", link: "https://github.com/flow-zy/langbook.git/discussions" },
-    ],
+    text: "首页",
+    icon: "material-symbols:home-outline",
+    link: "/"
   },
   {
-    text: "V2 文档",
-    icon: "book",
-    link: "https://theme-hope.vuejs.press/zh/",
+    text: "前端开发",
+    icon: "mingcute:web-line",
+    children: [
+      { text: "Web 前端开发", icon:'arcticons:es-de-frontend',link: "/categories/frontend/web/" },
+      { text: "前端框架",icon:'system-uicons:cubes', link: "/categories/frontend/frameworks/" }
+    ]
+  },
+  {
+    text: "后端开发",
+    icon: "lets-icons:server",
+    children: [
+      { text: "Java 开发", icon:'ri:java-fill', link: "/categories/backend/java/" },
+      { text: "Node.js 开发", icon:'akar-icons:node-fill', link: "/categories/backend/nodejs/" },
+      { text: "PHP 开发", icon:'vscode-icons:file-type-php2', link: "/categories/backend/php/" }
+    ]
+  },
+  {
+    text: "小程序开发",
+    icon: "tdesign:logo-miniprogram",
+    link: "/categories/miniprogram/"
+  },
+  {
+    text: "鸿蒙开发",
+    icon: "token:harmony",
+    link: "/categories/harmony/"
+  },
+  {
+    text: "实战项目",
+    icon: "si:projects-alt-line",
+    link: "/tutorials/projects/"
   },
 ]);

@@ -11,7 +11,7 @@ export default hopeTheme({
   //   name: "Mr.Hope",
   //   url: "https://mister-hope.com",
   // },
-
+  favicon: "/favicon.ico",
   logo: "/new-logo.svg",  
   repo: "https://github.com/flow-zy/langbook.git",
 
@@ -36,7 +36,6 @@ export default hopeTheme({
       },
     },
   },
-
   // 多语言配置
   metaLocales: {
     editLink: "在 GitHub 上编辑此页",
@@ -123,23 +122,18 @@ export default hopeTheme({
     // 注意: 仅用于测试! 你必须自行生成并在生产环境中使用自己的评论服务
     comment: {
       provider: "Giscus",
-      repo: "langbook/giscus-discussions",
-      repoId: "R_kgDOG_Pt2A",
+      repo: "flow-zy/langbook",
+      repoId: "R_kgDOPgjaXg",
       category: "Announcements",
-      categoryId: "DIC_kwDOG_Pt2M4COD69",
+      categoryId: "DIC_kwDOPgjaXs4CuWRg",
     },
 
     components: {
       components: ["Badge", "VPCard"],
     },
-
-    icon: {
-      prefix: "fa6-solid:",
-    },
-
     // 如果你需要 PWA。安装 @vuepress/plugin-pwa 并取消下方注释
     pwa: {
-      favicon: "/favicon.ico",
+      favicon: "/langbook/favicon.ico",
       cacheHTML: true,
       cacheImage: true,
       appendBase: true,
