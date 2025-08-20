@@ -344,6 +344,7 @@ CSS 支持多种类型的渐变，可以用作背景。
   -webkit-mask-image: url("mask.png"); /* Safari 兼容性 */
   -webkit-mask-size: cover;
 }
+```
 ### 4. 背景混合模式
 使用 `background-blend-mode` 属性可以设置背景图片与背景颜色的混合模式，创造丰富的视觉效果。
 
