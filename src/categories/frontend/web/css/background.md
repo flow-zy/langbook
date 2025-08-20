@@ -533,7 +533,10 @@ CSS 支持多种类型的渐变，可以用作背景。
 2. 实现一个带有文字遮罩的背景图片效果。
 3. 使用背景混合模式创建一个独特的图像效果。
 4. 设计一个响应式背景，在不同屏幕尺寸下显示不同的背景图片。
-5. 创建一个无限滚动的背景动画效果。 <div class="demo-item blend-multiply">multiply</div>
+5. 创建一个无限滚动的背景动画效果。 
+::: normal-demo
+```html
+<div class="demo-item blend-multiply">multiply</div>
   <div class="demo-item blend-screen">screen</div>
   <div class="demo-item blend-overlay">overlay</div>
   <div class="demo-item blend-darken">darken</div>
