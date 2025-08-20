@@ -7,10 +7,10 @@ export default sidebar({
       icon: "arcticons:es-de-frontend",
       prefix: "/categories/frontend/web/",
       children: [
-        { text: "HTML",icon:'picon:html', link: "html" },
-        { text: "CSS",icon:'material-icon-theme:css', link: "css" },  
-        { text: "JavaScript",icon:'ri:javascript-line', link: "javascript" },
-        { text: "TypeScript",icon:'proicons:typescript', link: "typescript" }
+        { text: "HTML",icon:'picon:html', link: "html/" },
+        { text: "CSS",icon:'fa7-brands:css', link: "css/" },  
+        { text: "JavaScript",icon:'ri:javascript-line', link: "javascript/" },
+        { text: "TypeScript",icon:'proicons:typescript', link: "typescript/" }
       ]
     }
   ]
