@@ -8,7 +8,7 @@ bgImageDark: https://theme-hope-assets.vuejs.press/bg/grid-dark.svg
 bgImageStyle:
   background-attachment: fixed
   background-size: 100px 100px
-heroText: 编程导航
+heroText: 编程学习指南
 heroTextStyle:
   font-size: 3rem
   font-weight: bold
@@ -22,14 +22,6 @@ actions:
   - text: 💡 开始学习
     link: ./categories/
     type: primary
-
-  - text: 📚 浏览教程
-    link: ./tutorials/
-    type: secondary
-
-  - text: 🔍 搜索内容
-    link: /search/
-    type: secondary
 
 features:
   - title: Web 前端开发
@@ -73,7 +65,7 @@ features:
     link: ./tutorials/projects/
 
 copyright: false
-footer: 编程导航 | 一站式编程学习平台，探索前端、后端、小程序和鸿蒙开发的精彩世界
+footer: 编程学习指南 | 一站式编程学习平台，探索前端、后端、小程序和鸿蒙开发的精彩世界
 ---
 
 欢迎来到编程语言学习博客！这里聚焦于前端、后端、小程序和鸿蒙开发的学习资源。

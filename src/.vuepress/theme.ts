@@ -14,7 +14,7 @@ export default hopeTheme({
   favicon: "/favicon.ico",
   logo: "/new-logo.svg",  
   repo: "https://github.com/flow-zy/langbook.git",
-
+  
   docsDir: "src",
 
   // 导航栏
@@ -190,5 +190,8 @@ export default hopeTheme({
     photoSwipe:true,
     seo:true,
     feed:true,
+    icon:{
+      assets:"https://unpkg.com/iconify-icon@3.0.0/dist/iconify-icon.min.js"
+    }
   },
 });
