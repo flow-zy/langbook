@@ -4,10 +4,10 @@
 
 ## 目录
 
-- [后端开发](#后端开发)
-- [前端开发](#前端开发)
-- [鸿蒙开发](#鸿蒙开发)
-- [小程序开发](#小程序开发)
+- [后端开发](/categories/backend/README.md)
+- [前端开发](/categories/frontend/README.md)
+- [鸿蒙开发](/categories/harmony/README.md)
+- [小程序开发](/categories/miniprogram/README.md)
 
 ## 后端开发
 
