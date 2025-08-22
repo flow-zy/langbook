@@ -33,7 +33,7 @@
 - [原型与原型链](prototype-and-prototype-chain.md)
 - [this 关键字](this-keyword.md)
 - [事件循环与回调函数](event-loop-and-callback.md)
-
+- [JSON对象](json.md)
 ## 浏览器相关
 
 - [BOM](bom.md)
@@ -42,16 +42,27 @@
 ## ES6+ 及现代语法
 
 - [let、const 与块级作用域](es6-let-const.md)
-- [箭头函数](es6-arrow-functions.md)
 - [模板字符串](es6-template-strings.md)
+- [字符串的扩展](es6-string-extensions.md)
 - [解构赋值](es6-destructuring.md)
-- [类与继承](es6-classes.md)
-- [模块系统](es6-modules.md)
-- [Promise 与异步编程](es6-promises.md)
-- [async/await](es6-async-await.md)
 - [展开运算符与剩余参数](es6-spread-rest.md)
-- [迭代器与生成器](es6-iterators-generators.md)
-- [Map、Set 等数据结构](es6-data-structures.md)
+- [正则的扩展](es6-regex-extensions.md)
+- [数值的扩展](es6-number-extensions.md)
+- [箭头函数](es6-arrow-functions.md)
+- [数组的扩展](es6-array-extensions.md)
+- [函数的扩展](es6-function-extensions.md)
+- [对象的扩展](es6-object-extensions.md)
+- [Symbol](es6-symbol.md)
+- [Proxy](es6-proxy.md)
+- [Reflect](es6-reflect.md)
+- [Iterator 和 for...of 循环](es6-iterator.md)
+- [Generator 函数](es6-generator.md)
+- [Promise](es6-promise.md)
+- [async/await](es6-async-await.md)
+- [Set 和 Map](es6-set-map.md)
+- [Module（模块系统）](es6-module.md)
+- [类与继承](es6-classes.md)
+- [Decorator（装饰器）](es6-decorator.md)
 
 ## 学习资源
 

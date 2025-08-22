@@ -320,9 +320,51 @@ var userWithId2 = find(users, function(user) {
 console.log(userWithId2); // { id: 2, name: "李四" }
 ```
 
-#### 传统方式实现findIndex功能
+#### find
+
+`find`方法返回数组中满足提供的测试函数的第一个元素的值。如果没有找到满足条件的元素，则返回`undefined`。
+
+> 注意：`find`方法是ES6引入的，但我们可以在ES5中实现类似功能。
 
 ```javascript
+// ES5实现find功能
+function find(arr, callback) {
+  for (var i = 0; i < arr.length; i++) {
+    if (callback(arr[i], i, arr)) {
+      return arr[i];
+    }
+  }
+  return undefined;
+}
+
+// 查找第一个大于3的元素
+var firstGreaterThanThree = find(numbers, function(num) {
+  return num > 3;
+});
+console.log(firstGreaterThanThree); // 4
+
+// 实际应用：查找对象数组中的特定元素
+var users = [
+  { id: 1, name: "张三" },
+  { id: 2, name: "李四" },
+  { id: 3, name: "王五" }
+];
+var userWithId2 = find(users, function(user) {
+  return user.id === 2;
+});
+console.log(userWithId2); // { id: 2, name: "李四" }
+```
+
+适用场景：当你需要查找数组中满足特定条件的第一个元素时。
+
+#### findIndex
+
+`findIndex`方法返回数组中满足提供的测试函数的第一个元素的索引。如果没有找到满足条件的元素，则返回-1。
+
+> 注意：`findIndex`方法是ES6引入的，但我们可以在ES5中实现类似功能。
+
+```javascript
+// ES5实现findIndex功能
 function findIndex(arr, callback) {
   for (var i = 0; i < arr.length; i++) {
     if (callback(arr[i], i, arr)) {
@@ -343,6 +385,25 @@ var firstNegativeIndex = findIndex(numbers, function(num) {
   return num < 0;
 });
 console.log(firstNegativeIndex); // -1 (表示不存在)
+```
+
+适用场景：当你需要查找数组中满足特定条件的第一个元素的索引时。
+
+#### 数组方法兼容性说明
+
+| 方法 | ES版本 | IE支持 | 主流浏览器支持 |
+|------|--------|--------|----------------|
+| `forEach` | ES5 | 9+ | 全支持 |
+| `map` | ES5 | 9+ | 全支持 |
+| `filter` | ES5 | 9+ | 全支持 |
+| `reduce` | ES5 | 9+ | 全支持 |
+| `reduceRight` | ES5 | 9+ | 全支持 |
+| `every` | ES5 | 9+ | 全支持 |
+| `some` | ES5 | 9+ | 全支持 |
+| `find` | ES6 | 12+ | 全支持 |
+| `findIndex` | ES6 | 12+ | 全支持 |
+
+> 注意：对于不支持ES5/ES6方法的旧浏览器，可以使用polyfill来提供兼容性支持。
 ```
 
 ### 遍历方法的性能 considerations
@@ -563,120 +624,6 @@ console.log(queryString); // 'name=%E5%BC%A0%E4%B8%89&age=25&city=%E5%8C%97%E4%B
 ```
 
 适用场景：当你需要将数组元素连接成字符串时。
-
-#### 传统方式实现includes功能
-
-```javascript
-function includes(arr, searchElement) {
-  for (var i = 0; i < arr.length; i++) {
-    if (arr[i] === searchElement) {
-      return true;
-    }
-  }
-  return false;
-}
-
-var hasOrange = includes(fruits, '橙子');
-console.log(hasOrange); // true
-var hasMango = includes(fruits, '芒果');
-console.log(hasMango); // false
-
-// 实际应用：检查用户是否有权限
-var allowedUsers = ['admin', 'editor', 'user1'];
-function isAllowed(username) {
-  return includes(allowedUsers, username);
-}
-console.log(isAllowed('admin')); // true
-console.log(isAllowed('guest')); // false
-```
-
-#### 传统方式实现flat功能
-
-```javascript
-function flat(arr, depth) {
-  depth = depth || 1;
-  var result = [];
-  
-  function flatten(array, currentDepth) {
-    for (var i = 0; i < array.length; i++) {
-      if (Array.isArray(array[i]) && currentDepth < depth) {
-        flatten(array[i], currentDepth + 1);
-      } else {
-        result.push(array[i]);
-      }
-    }
-  }
-  
-  flatten(arr, 0);
-  return result;
-}
-
-var nestedArray = [1, [2, [3, [4]]]];
-var flatArray1 = flat(nestedArray, 1);
-console.log(flatArray1); // [1, 2, [3, [4]]]
-
-var flatArray2 = flat(nestedArray, 2);
-console.log(flatArray2); // [1, 2, 3, [4]]
-
-// 实际应用：展平菜单结构
-var menu = [
-  { name: '首页', url: '/' },
-  { name: '产品', url: '/products', submenu: [
-    { name: '产品1', url: '/products/1' },
-    { name: '产品2', url: '/products/2' }
-  ]},
-  { name: '关于我们', url: '/about' }
-];
-
-// 提取所有URL
-var allUrls = flat(menu.map(function(item) {
-  if (item.submenu) {
-    return [item.url].concat(item.submenu.map(function(sub) { return sub.url; }));
-  } else {
-    return item.url;
-  }
-}), 1);
-console.log(allUrls); // ['/', '/products', '/products/1', '/products/2', '/about']
-```
-
-#### 传统方式实现flatMap功能
-
-```javascript
-function flatMap(arr, callback) {
-  var result = [];
-  for (var i = 0; i < arr.length; i++) {
-    var value = callback(arr[i], i, arr);
-    if (Array.isArray(value)) {
-      for (var j = 0; j < value.length; j++) {
-        result.push(value[j]);
-      }
-    } else {
-      result.push(value);
-    }
-  }
-  return result;
-}
-
-var numbers = [1, 2, 3];
-var mapped = flatMap(numbers, function(num) {
-  return [num, num * 2];
-});
-console.log(mapped); // [1, 2, 2, 4, 3, 6]
-
-// 实际应用：处理嵌套数据
-var orders = [
-  { id: 1, items: ['产品A', '产品B'] },
-  { id: 2, items: ['产品C'] },
-  { id: 3, items: ['产品D', '产品E', '产品F'] }
-];
-
-// 提取所有产品
-var allProducts = flatMap(orders, function(order) {
-  return order.items;
-});
-console.log(allProducts); // ['产品A', '产品B', '产品C', '产品D', '产品E', '产品F']
-```
-
 ### 操作方法的性能对比
 
 - `push`和`pop`操作在数组末尾进行，性能较好
@@ -1029,28 +976,6 @@ function removeLastOccurrence(arr, search) {
 }
 removeLastOccurrence(fruits, "香蕉");
 console.log(fruits); // ["苹果", "猕猴桃", "橙子"]
-```
-
-#### 传统方式实现includes功能
-
-在ES5中，我们可以使用`indexOf`方法来模拟`includes`功能。
-
-```javascript
-function includes(arr, value) {
-  return arr.indexOf(value) !== -1;
-}
-
-console.log(includes(numbers, 3)); // true
-console.log(includes(numbers, 6)); // false
-console.log(includes(mixed, null)); // true
-
-// 实际应用：检查用户是否有权限
-var allowedRoles = ["admin", "editor", "contributor"];
-function hasPermission(userRole) {
-  return includes(allowedRoles, userRole);
-}
-console.log(hasPermission("admin")); // true
-console.log(hasPermission("guest")); // false
 ```
 
 #### isArray

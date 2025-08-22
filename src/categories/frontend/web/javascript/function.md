@@ -190,6 +190,89 @@ console.log(greet("John")); // "undefined, John!"
 console.log(greet("John", "Hello", "Extra")); // "Hello, John!" (多余参数被忽略)
 ```
 
+### arguments 对象
+
+`arguments`是一个类数组对象，包含了函数调用时传递的所有参数。它只在函数内部可用，并且提供了对参数的访问。
+
+```javascript
+function sum() {
+  var total = 0;
+  for (var i = 0; i < arguments.length; i++) {
+    total += arguments[i];
+  }
+  return total;
+}
+
+console.log(sum(1, 2, 3)); // 6
+console.log(sum(1, 2, 3, 4, 5)); // 15
+```
+
+### arguments 对象的特性
+
+1. **类数组**：arguments不是真正的数组，但可以通过索引访问元素，并有length属性
+2. **callee**：指向当前正在执行的函数（不推荐使用，在严格模式下被禁止）
+3. **修改参数**：修改arguments中的元素会影响对应的形参（除非在严格模式下）
+
+```javascript
+// 修改arguments会影响形参
+function test(a) {
+  console.log(a); // 1
+  arguments[0] = 10;
+  console.log(a); // 10
+}
+
+test(1);
+
+// 严格模式下不会影响
+function strictTest(a) {
+  "use strict";
+  console.log(a); // 1
+  arguments[0] = 10;
+  console.log(a); // 1
+}
+
+strictTest(1);
+```
+
+### arguments 对象的应用场景
+
+1. **处理可变数量的参数**
+```javascript
+function average() {
+  if (arguments.length === 0) return 0;
+  var sum = 0;
+  for (var i = 0; i < arguments.length; i++) {
+    sum += arguments[i];
+  }
+  return sum / arguments.length;
+}
+
+console.log(average(1, 2, 3, 4, 5)); // 3
+```
+
+2. **函数重载**
+```javascript
+function add() {
+  if (arguments.length === 0) {
+    return 0;
+  } else if (arguments.length === 1) {
+    return arguments[0];
+  } else {
+    var sum = 0;
+    for (var i = 0; i < arguments.length; i++) {
+      sum += arguments[i];
+    }
+    return sum;
+  }
+}
+
+console.log(add()); // 0
+console.log(add(5)); // 5
+console.log(add(1, 2, 3)); // 6
+```
+
+> 注意：在ES6及以后的版本中，推荐使用剩余参数(rest parameters)代替arguments对象，因为剩余参数是真正的数组，并且在严格模式和非严格模式下表现一致。
+
 ### 参数验证
 良好的函数应该对输入参数进行验证：
 
@@ -874,8 +957,6 @@ console.log(counter.increment()); // 2
 console.log(counter.getCount()); // 2
 ```
 
-```
-
 ### IIFE最佳实践
 - 在ES6环境下，优先使用块级作用域和模块
 - 对于需要支持旧浏览器的代码，IIFE仍然是有效的封装方式
@@ -908,20 +989,62 @@ var john = { firstName: "John", lastName: "Doe" };
 var jane = { firstName: "Jane", lastName: "Smith" };
 
 // call 方法
+// call方法接受的参数是逗号分隔的参数列表
 console.log(person.fullName.call(john)); // "John Doe"
 console.log(person.greet.call(jane, "Hello", "!")); // "Hello, Jane Smith!"
 
-// apply 方法 (参数以数组形式传递)
+// apply 方法
+// apply方法接受的参数是一个数组
 console.log(person.fullName.apply(john)); // "John Doe"
 console.log(person.greet.apply(jane, ["Hi", "."])); // "Hi, Jane Smith."
 
-// bind 方法 (创建新函数)
+// bind 方法
+// bind方法创建一个新函数，并永久绑定this指向
 var greetJohn = person.greet.bind(john);
 console.log(greetJohn("Hey", "!")); // "Hey, John Doe!"
 
 // bind 方法可以预设部分参数
 var greetJohnWithHi = person.greet.bind(john, "Hi");
 console.log(greetJohnWithHi("!")); // "Hi, John Doe!"
+```
+### call、apply 和 bind 的对比
+
+| 方法 | 作用 | 参数传递 | 返回值 | 调用时机 |
+|------|------|----------|--------|----------|
+| `call` | 改变this指向 | 逗号分隔的参数列表 | 函数执行结果 | 立即调用 |
+| `apply` | 改变this指向 | 数组形式的参数列表 | 函数执行结果 | 立即调用 |
+| `bind` | 改变this指向 | 逗号分隔的参数列表 | 新函数 | 延迟调用 |
+
+### 实际应用示例
+
+```javascript
+// 使用call调用函数并传递参数
+function sayHello(greeting, punctuation) {
+  return greeting + ', ' + this.name + punctuation;
+}
+
+var person = { name: 'John' };
+console.log(sayHello.call(person, 'Hello', '!')); // "Hello, John!"
+
+// 使用apply调用函数并传递数组参数
+var args = ['Hi', '.'];
+console.log(sayHello.apply(person, args)); // "Hi, John."
+
+// 使用bind创建新函数
+var greetJohn = sayHello.bind(person, 'Hey');
+console.log(greetJohn('!')); // "Hey, John!"
+
+// 绑定回调函数的this
+var timer = {
+  seconds: 10,
+  start: function() {
+    setInterval(function() {
+      this.seconds--;
+      console.log(this.seconds);
+    }.bind(this), 1000); // 绑定this到timer对象
+  }
+};
+// timer.start(); // 取消注释以测试
 ```
 
 ### call、apply 和 bind 的区别

@@ -215,6 +215,95 @@ var myModule = (function() {
 })();
 ```
 
+## 严格模式
+
+严格模式（Strict Mode）是ES5引入的一种限制性更强的JavaScript运行模式，它通过抛出错误来消除一些静默错误，修复了一些导致JavaScript引擎难以优化的缺陷，并禁用了一些可能在未来版本中定义的语法。
+
+### 启用严格模式
+
+在脚本或函数的顶部添加`"use strict";`指令可以启用严格模式：
+
+```javascript
+// 全局严格模式
+"use strict";
+var x = 10;
+
+// 函数级严格模式
+function strictFunction() {
+  "use strict";
+  var y = 20;
+}
+```
+
+### 严格模式的特性
+
+1. **禁止使用未声明的变量**
+   ```javascript
+   "use strict";
+   x = 10; // 报错: x is not defined
+   ```
+
+2. **禁止删除变量或函数**
+   ```javascript
+   "use strict";
+   var x = 10;
+   delete x; // 报错: Cannot delete variable x
+   ```
+
+3. **禁止重复参数名**
+   ```javascript
+   "use strict";
+   function duplicateParams(a, a) { } // 报错: Duplicate parameter name not allowed
+   ```
+
+4. **禁止八进制字面量**
+   ```javascript
+   "use strict";
+   var x = 0123; // 报错: Octal literals are not allowed
+   ```
+
+5. **禁止使用with语句**
+   ```javascript
+   "use strict";
+   with (obj) { } // 报错: with statement is not allowed
+   ```
+
+6. **this值为undefined**
+   在严格模式下，全局函数中的this不再指向全局对象，而是undefined：
+   ```javascript
+   "use strict";
+   function test() {
+     console.log(this); // undefined
+   }
+   test();
+   ```
+
+7. **禁止修改只读属性**
+   ```javascript
+   "use strict";
+   var obj = {};
+   Object.defineProperty(obj, "x", { value: 10, writable: false });
+   obj.x = 20; // 报错: Cannot assign to read only property 'x'
+   ```
+
+### 严格模式的优势
+
+1. **提高代码质量**：通过抛出错误消除静默错误
+2. **增强安全性**：禁止一些不安全的操作
+3. **优化性能**：修复了一些导致JavaScript引擎难以优化的缺陷
+4. **为未来做好准备**：禁用了一些可能在未来版本中定义的语法
+
+### 严格模式与非严格模式的区别
+
+| 特性 | 非严格模式 | 严格模式 |
+|------|------------|----------|
+| 未声明变量 | 成为全局变量 | 抛出错误 |
+| this值（全局函数） | 全局对象 | undefined |
+| 重复参数名 | 允许 | 抛出错误 |
+| 八进制字面量 | 允许 | 抛出错误 |
+| with语句 | 允许 | 抛出错误 |
+| 删除变量 | 静默失败 | 抛出错误 |
+
 ## 常见问题与解答
 
 ### 1. 变量提升会导致什么问题？

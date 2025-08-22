@@ -380,12 +380,36 @@ var frozenObj = Object.freeze({a: 1});
 frozenObj.a = 2; // 无效
 
 // Object.seal() - 密封对象，防止添加或删除属性，但可以修改现有属性
+// 密封对象后，现有属性的可配置性被设置为false，但可写性保持不变
 var sealedObj = Object.seal({a: 1});
+console.log(Object.isSealed(sealedObj)); // true
 sealedObj.a = 2; // 有效
+console.log(sealedObj.a); // 2
 sealedObj.b = 3; // 无效
+console.log(sealedObj.b); // undefined
 
 delete sealedObj.a; // 无效
+console.log(sealedObj.a); // 2
+
+// Object.preventExtensions() - 防止对象扩展，不能添加新属性
+// 与seal不同，preventExtensions只阻止添加新属性，不影响现有属性的删除和修改
+var nonExtensibleObj = Object.preventExtensions({a: 1});
+console.log(Object.isExtensible(nonExtensibleObj)); // false
+nonExtensibleObj.a = 2; // 有效
+console.log(nonExtensibleObj.a); // 2
+delete nonExtensibleObj.a; // 有效
+console.log(nonExtensibleObj.a); // undefined
+nonExtensibleObj.b = 3; // 无效
+console.log(nonExtensibleObj.b); // undefined
 ```
+
+## 对象保护方法对比
+
+| 方法 | 能否添加新属性 | 能否删除现有属性 | 能否修改现有属性 | 能否修改属性描述符 |
+|------|----------------|------------------|------------------|--------------------|
+| `Object.freeze()` | 不能 | 不能 | 不能 | 不能 |
+| `Object.seal()` | 不能 | 不能 | 能 | 不能 |
+| `Object.preventExtensions()` | 不能 | 能 | 能 | 能 |
 
 ## 常见问题与解答
 
@@ -478,5 +502,4 @@ Object.defineProperty(obj, 'a', {
 });
 obj.a = 2; // 无效
 console.log(obj.a); // 1
-```
 ```

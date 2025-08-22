@@ -1,3 +1,10 @@
+/*
+ * @FileDescription: 
+ * @Author       : zoujunjie
+ * @Date         : 2025-08-19 16:36:12
+ * @LastEditors  : zoujunjie
+ * @LastEditTime : 2025-08-22 21:11:14
+ */
 import { sidebar } from "vuepress-theme-hope";
 
 export default sidebar({
@@ -54,20 +61,30 @@ export default sidebar({
             { text: "作用域", link: "scope" },
             { text: "this关键字", link: "this-keyword" },
             { text: "事件循环与回调", link: "event-loop-and-callback" },
+            { text: "JSON对象", link: "json" },
             { text: "BOM", link: "bom" },
             { text: "DOM", link: "dom" },
             { text: "let、const与块级作用域", link: "es6-let-const" },
-            { text: "箭头函数", link: "es6-arrow-functions" },
-            { text: "模板字符串", link: "es6-template-literals" },
             { text: "解构赋值", link: "es6-destructuring" },
-            { text: "剩余参数与展开运算符", link: "es6-rest-spread" },
+            { text: "模板字符串", link: "es6-template-literals" },
+            { text: "字符串的扩展", link: "es6-string-extensions" },
+            { text: "正则的扩展", link: "es6-regex-extensions" },
+            { text: "数值的扩展", link: "es6-number-extensions" },
+            { text: "数组的扩展", link: "es6-array-extensions" },
+            { text: "箭头函数", link: "es6-arrow-functions" },
+            { text: "函数的扩展", link: "es6-function-extensions" },
+            { text: "对象的扩展", link: "es6-object-extensions" },
+            { text: "Symbol", link: "es6-symbol" },
             { text: "类与继承", link: "es6-classes" },
-            { text: "Promise与异步编程", link: "es6-promises" },
-            { text: "模块化", link: "es6-modules" },
+            { text: "Promise", link: "es6-promise" },
+            { text: "async/await", link: "es6-async-await" },
+            { text: "模块化", link: "es6-module" },
             { text: "Set和Map数据结构", link: "es6-set-map" },
-            { text: "迭代器与生成器", link: "es6-iterators-generators" },
-            { text: "Proxy与Reflect", link: "es6-proxy-reflect" },
-            { text: "装饰器", link: "es6-decorators" }
+            { text: "Iterator 和 for...of 循环", link: "es6-iterator" },
+            { text: "Generator 函数", link: "es6-generator" },
+            { text: "Proxy", link: "es6-proxy" },
+            { text: "Reflect", link: "es6-reflect" },
+            { text: "装饰器", link: "es6-decorator" }
           ]
         },
         { text: "TypeScript", icon: 'proicons:typescript', link: "typescript/" }
