@@ -3,7 +3,7 @@
  * @Author       : zoujunjie
  * @Date         : 2025-08-19 16:36:12
  * @LastEditors  : zoujunjie
- * @LastEditTime : 2025-08-22 21:11:14
+ * @LastEditTime : 2025-08-22 23:07:49
  */
 import { sidebar } from "vuepress-theme-hope";
 
@@ -21,6 +21,7 @@ export default sidebar({
           prefix: "css/", 
           collapsible: true,
           children: [
+            { text: "学习指南", link: "./" },
             { text: "CSS 简介", link: "intro" },
             { text: "单位和值", link: "units-and-values" },
             { text: "选择器", link: "selectors-advanced" },
@@ -52,6 +53,7 @@ export default sidebar({
           prefix: "javascript/",
           collapsible: true,
           children: [
+            { text: "学习指南", link: "./" },
             { text: "变量与数据类型", link: "variables-and-data-types" },
             { text: "运算符与流程控制", link: "operators-and-control-flow" },
             { text: "函数", link: "function" },
@@ -88,7 +90,31 @@ export default sidebar({
             { text: "装饰器", link: "es6-decorator" }
           ]
         },
-        { text: "TypeScript", icon: 'proicons:typescript', link: "typescript/" }
+        { 
+          text: "TypeScript", 
+          icon: 'proicons:typescript', 
+          prefix: "typescript/",
+          collapsible: true,
+          children: [
+            { text: "学习指南", link: "./" },
+            { text: "入门概念", link: "intro" },
+            { text: "安装配置", link: "installation" },
+            { text: "基本类型", link: "basic-types" },
+            { text: "函数", link: "functions" },
+            { text: "接口与类型别名", link: "interfaces-and-type-aliases" },
+            { text: "类与继承", link: "classes-and-inheritance" },
+            { text: "泛型", link: "generics" },
+            { text: "枚举", link: "enums" },
+            { text: "联合类型与交叉类型", link: "union-and-intersection-types" },
+            { text: "高级类型", link: "advanced-types" },
+            { text: "装饰器", link: "decorators" },
+            { text: "模块与命名空间", link: "modules-and-namespaces" },
+            { text: "类型声明文件", link: "type-declaration-files" },
+            { text: "高级编译选项", link: "advanced-compiler-options" },
+            { text: "React 与 TypeScript", link: "react-with-typescript" },
+            { text: "Vue 与 TypeScript", link: "vue-with-typescript" }
+          ]
+        }
       ]
     }
   ]
