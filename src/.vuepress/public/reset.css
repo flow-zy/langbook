@@ -1,0 +1,89 @@
+/* 基础样式重置 */
+
+/* 重置所有元素的边距和内边距 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 重置列表样式 */
+ul, ol {
+  list-style: none;
+}
+
+/* 重置链接样式 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 重置表格样式 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 重置表单元素样式 */
+input, button, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  appearance: none;
+}
+
+/* 重置图片样式 */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 重置字体样式 */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+/* 清除浮动 */
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* 响应式图片 */
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 辅助类 */
+.hidden {
+  display: none !important;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

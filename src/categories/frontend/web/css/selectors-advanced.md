@@ -1,4 +1,135 @@
-# 现代选择器、层叠与继承
+# 选择器、层叠与继承
+
+## 什么是选择器？
+选择器是CSS中用于选择HTML元素并应用样式的模式。掌握基础选择器是学习CSS的第一步。
+
+## 基础选择器
+
+### 1. 元素选择器（标签选择器）
+元素选择器通过HTML标签名称来选择元素。这是最基本的选择器类型。
+
+```css
+/* 选择所有p元素 */
+p {
+  color: black;
+  font-size: 16px;
+}
+
+/* 选择所有div元素 */
+div {
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+/* 选择所有h1元素 */
+h1 {
+  color: blue;
+  font-size: 24px;
+}
+```
+
+### 2. 类选择器
+类选择器通过元素的`class`属性值来选择元素。类选择器以点（`.`）开头。
+
+```css
+/* 选择所有class为"container"的元素 */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 选择所有class为"highlight"的元素 */
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+```
+
+HTML中使用class属性：
+```html
+<div class="container">
+  <p class="highlight">这段文字会被高亮显示</p>
+  <p>这段文字是普通样式</p>
+</div>
+```
+
+### 3. ID选择器
+ID选择器通过元素的`id`属性值来选择元素。ID选择器以井号（`#`）开头。每个ID在文档中应该是唯一的。
+
+```css
+/* 选择id为"header"的元素 */
+#header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+/* 选择id为"footer"的元素 */
+#footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+```
+
+HTML中使用id属性：
+```html
+<div id="header">
+  <h1>网站标题</h1>
+</div>
+
+<div id="footer">
+  <p>版权所有 © 2023</p>
+</div>
+```
+
+### 4. 通用选择器
+通用选择器选择文档中的所有元素。它以星号（`*`）表示。
+
+```css
+/* 选择所有元素 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+```
+
+通用选择器常用来重置浏览器默认样式，但要注意它会影响性能，尽量避免过度使用。
+
+### 5. 属性选择器
+属性选择器通过元素的属性来选择元素。
+
+```css
+/* 选择所有带有title属性的元素 */
+[title] {
+  color: red;
+}
+
+/* 选择title属性值为"tooltip"的元素 */
+[title="tooltip"] {
+  border-bottom: 1px dashed;
+  cursor: help;
+}
+
+/* 选择class属性值包含"btn"的元素 */
+[class*="btn"] {
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+/* 选择href属性值以"https://"开头的元素 */
+[href^="https://"] {
+  color: green;
+}
+
+/* 选择src属性值以".jpg"结尾的元素 */
+[src$=".jpg"] {
+  border: 2px solid black;
+}
+```
 
 ## 现代选择器
 
@@ -236,7 +367,59 @@ div:empty { display: none; }
 /* 没有active类的按钮 */
 button:not(.active) { opacity: 0.7; }
 ```
+## 选择器组合
+可以组合使用多种选择器来精确选择元素。
 
+```css
+/* 元素选择器 + 类选择器：选择class为"warning"的p元素 */
+p.warning {
+  color: orange;
+  font-weight: bold;
+}
+
+/* 元素选择器 + ID选择器：选择id为"main-content"的div元素 */
+div#main-content {
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+/* 类选择器 + 类选择器：选择同时具有"btn"和"primary"类的元素 */
+.btn.primary {
+  background-color: blue;
+  color: white;
+}
+```
+
+## 选择器优先级
+当多个选择器应用到同一个元素时，优先级决定了哪个样式会被应用。
+
+优先级从高到低：
+1. ID选择器 (#id)
+2. 类选择器 (.class)、属性选择器 ([attribute])、伪类 (:pseudo-class)
+3. 元素选择器 (element)
+4. 通用选择器 (*)
+
+```css
+/* 优先级: 元素选择器 */
+p {
+  color: black;
+}
+
+/* 优先级: 类选择器 (高于元素选择器) */
+.highlight {
+  color: blue;
+}
+
+/* 优先级: ID选择器 (高于类选择器) */
+#special-paragraph {
+  color: red;
+}
+
+/* 优先级: !important (最高优先级，尽量避免使用) */
+p {
+  color: green !important;
+}
+```
 ## 层叠与继承
 
 ::: normal-demo

@@ -40,6 +40,7 @@ export default sidebar({
             { text: "形状与遮罩", link: "shapes-and-masks" },
             { text: "滤镜与特效", link: "filters-and-effects" },
             { text: "媒体特性", link: "media-features-accessibility" },
+            { text: '响应式设计', link: "responsive-design" },
             { text: "渲染性能", link: "rendering-performance" },
             { text: "自定义属性类型注册", link: "custom-property-registration" },
             { text: "函数补充", link: "function-reference" }
