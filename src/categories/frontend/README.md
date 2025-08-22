@@ -14,11 +14,10 @@ category: 编程语言
 
 ## 热门话题
 
-- [HTML5新特性](/categories/frontend/web/html/README.md)
-- [CSS布局技术](/categories/frontend/web/css/layout-models.md)
-- [JavaScript异步编程](/categories/frontend/web/javascript/es6-promises.md)
-- [TypeScript类型系统](/categories/frontend/web/typescript/)：包含从入门到高级的全面TypeScript学习资源，涵盖基础类型、函数、接口、类、泛型等核心概念和实战应用。
-- [Vue组件开发](/categories/frontend/frameworks/README.md)
-- [React](/categories/frontend/frameworks/README.md)
-- [响应式设计](/categories/frontend/web/css/media-features-accessibility.md)
-- [前端性能优化](/categories/frontend/web/css/rendering-performance.md)
+- [HTML5新特性](./categories/frontend/web/html/README.md)
+- [CSS布局技术](./categories/frontend/web/css/layout-models.md)
+- [JavaScript异步编程](/categories/frontend/web/javascript/es6-promise.md)
+- [TypeScript](./categories/frontend/web/typescript/index)：包含从入门到高级的全面TypeScript学习资源，涵盖基础类型、函数、接口、类、泛型等核心概念和实战应用。
+- [Vue组件开发](./categories/frontend/frameworks/README.md)
+- [React](./categories/frontend/frameworks/README.md)
+- [响应式设计](./categories/frontend/web/css/responsive-design.md)

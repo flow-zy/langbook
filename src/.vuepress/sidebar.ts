@@ -3,7 +3,7 @@
  * @Author       : zoujunjie
  * @Date         : 2025-08-19 16:36:12
  * @LastEditors  : zoujunjie
- * @LastEditTime : 2025-08-22 23:07:49
+ * @LastEditTime : 2025-08-22 23:45:50
  */
 import { sidebar } from "vuepress-theme-hope";
 
@@ -21,7 +21,7 @@ export default sidebar({
           prefix: "css/", 
           collapsible: true,
           children: [
-            { text: "学习指南", link: "./" },
+            { text: "学习指南", link: "index" },
             { text: "CSS 简介", link: "intro" },
             { text: "单位和值", link: "units-and-values" },
             { text: "选择器", link: "selectors-advanced" },
@@ -53,7 +53,7 @@ export default sidebar({
           prefix: "javascript/",
           collapsible: true,
           children: [
-            { text: "学习指南", link: "./" },
+            { text: "学习指南", link: "index" },
             { text: "变量与数据类型", link: "variables-and-data-types" },
             { text: "运算符与流程控制", link: "operators-and-control-flow" },
             { text: "函数", link: "function" },
@@ -96,7 +96,7 @@ export default sidebar({
           prefix: "typescript/",
           collapsible: true,
           children: [
-            { text: "学习指南", link: "./" },
+            { text: "学习指南", link: "index" },
             { text: "入门概念", link: "intro" },
             { text: "安装配置", link: "installation" },
             { text: "基本类型", link: "basic-types" },
