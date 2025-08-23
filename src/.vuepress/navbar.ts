@@ -15,7 +15,8 @@ export default navbar([
       { text: "JavaScript", icon:'vscode-icons:file-type-js', link: "/categories/frontend/javascript/" },
       { text: "TypeScript", icon:'vscode-icons:file-type-typescript', link: "/categories/frontend/typescript/" },
       { text: "Vue 2", icon:'vscode-icons:file-type-vue', link: "/categories/frontend/vue2/" },
-      { text: "Vue 3", icon:'vscode-icons:file-type-vue', link: "/categories/frontend/vue3/" }
+      { text: "Vue 3", icon:'vscode-icons:file-type-vue', link: "/categories/frontend/vue3/" },
+      { text: "网络", icon:'mdi:network-outline', link: "/categories/frontend/network/" }
     ]
   },
   {

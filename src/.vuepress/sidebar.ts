@@ -96,6 +96,15 @@ export default sidebar({
     { text: "高级特性", link: "advanced" },
     { text: "实战项目", link: "project" },
   ],
+  "/categories/frontend/network/": [
+    { text: "学习指南", link: "index" },
+    { text: "网络基础", link: "basics" },
+    { text: "API调用", link: "api-calls" },
+    { text: "跨域问题", link: "cors" },
+    { text: "错误处理", link: "error-handling" },
+    { text: "性能优化", link: "performance" },
+    { text: "网络安全", link: "security" },
+  ],
   "/categories/frontend/vue3/": [
     { text: "学习指南", link: "index" },
     { text: "基本概念", link: "basics" },
