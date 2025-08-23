@@ -1,23 +1,25 @@
----
-title: 前端开发
-icon: code
-category: 编程语言
----
+# Web 前端开发
 
-# 前端开发
+Web前端开发是构建和维护网站用户界面的过程，涉及通过HTML、CSS和JavaScript等技术创建视觉上吸引人且功能丰富的网页应用。前端开发者负责确保网站在不同设备和浏览器上都能良好运行，并提供优质的用户体验。
 
-前端开发是构建Web应用程序用户界面的关键领域，直接影响用户体验和交互效果。它不仅涉及HTML、CSS和JavaScript等基础技术，还包括现代框架（如React、Vue）、构建工具、响应式设计和性能优化等方面。
+## 学习路径
+1. [HTML基础](html/) - 学习网页结构的基础标记语言
+2. [CSS样式设计](css/) - 掌握网页的样式和布局设计
+3. [JavaScript编程基础](javascript/) - 学习网页交互和动态效果的核心语言
+4. [TypeScript类型系统](typescript/) - 了解如何使用TypeScript增强JavaScript的类型安全性
+5. [Vue 3框架](vue3/) - 学习Vue 3的核心概念和开发流程
 
-前端开发的核心目标是创建美观、易用、高效且跨平台的用户界面。随着Web技术的快速发展，前端开发也在不断演进，从最初的静态页面到如今的单页应用（SPA）、服务端渲染（SSR）和跨端开发，展现出强大的生命力和创新力。
+## 推荐资源
+- [MDN Web Docs](https://developer.mozilla.org/zh-CN/) - 最权威的Web开发文档
+- [W3Schools](https://www.w3schools.com/) - 提供交互式学习体验的Web技术教程
+- [前端开发者博客](https://frontendmasters.com/blog/) - 了解最新前端技术趋势
 
-这里你可以找到HTML、CSS、JavaScript、TypeScript、Vue和React等技术的学习资源，帮助你掌握前端开发的核心技能和最新趋势。
+## 开发工具
+- [VS Code](https://code.visualstudio.com/) - 流行的轻量级代码编辑器
+- [Chrome DevTools](https://developer.chrome.com/docs/devtools/) - 强大的网页调试工具
+- [Node.js](https://nodejs.org/) - 运行JavaScript的服务器环境
 
-## 热门话题
-
-- [HTML5新特性](./categories/frontend/web/html/README.md)
-- [CSS布局技术](./categories/frontend/web/css/layout-models.md)
-- [JavaScript异步编程](/categories/frontend/web/javascript/es6-promise.md)
-- [TypeScript](./categories/frontend/web/typescript/index)：包含从入门到高级的全面TypeScript学习资源，涵盖基础类型、函数、接口、类、泛型等核心概念和实战应用。
-- [Vue组件开发](./categories/frontend/frameworks/README.md)
-- [React](./categories/frontend/frameworks/README.md)
-- [响应式设计](./categories/frontend/web/css/responsive-design.md)
+## 前端框架
+- [React](https://reactjs.org/) - 由Facebook开发的组件化UI库
+- [Vue.js](https://vuejs.org/) - 渐进式JavaScript框架
+- [Angular](https://angular.io/) - 由Google维护的全功能框架

@@ -26,13 +26,8 @@ actions:
 features:
   - title: Web 前端开发
     icon: arcticons:es-de-frontend
-    details: HTML, CSS, JavaScript, TypeScript
-    link: ./categories/frontend/web/
-
-  - title: 前端框架
-    icon: system-uicons:cubes
-    details: Vue, React, Angular
-    link: ./categories/frontend/frameworks/
+    details: HTML, CSS, JavaScript, TypeScript,Vue, React, Angular
+    link: ./categories/frontend/html/
 
   - title: Java 开发
     icon: ri:java-fill

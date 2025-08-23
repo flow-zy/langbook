@@ -10,8 +10,12 @@ export default navbar([
     text: "前端开发",
     icon: "mingcute:web-line",
     children: [
-      { text: "Web 前端开发", icon:'arcticons:es-de-frontend',link: "/categories/frontend/web/" },
-      { text: "前端框架",icon:'system-uicons:cubes', link: "/categories/frontend/frameworks/" }
+      { text: "HTML", icon:'vscode-icons:file-type-html', link: "/categories/frontend/html/" },
+      { text: "CSS", icon:'vscode-icons:file-type-css', link: "/categories/frontend/css/" },
+      { text: "JavaScript", icon:'vscode-icons:file-type-js', link: "/categories/frontend/javascript/" },
+      { text: "TypeScript", icon:'vscode-icons:file-type-typescript', link: "/categories/frontend/typescript/" },
+      { text: "Vue 2", icon:'vscode-icons:file-type-vue', link: "/categories/frontend/vue2/" },
+      { text: "Vue 3", icon:'vscode-icons:file-type-vue', link: "/categories/frontend/vue3/" }
     ]
   },
   {
