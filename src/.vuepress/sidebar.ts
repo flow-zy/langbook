@@ -1,6 +1,33 @@
 import { sidebar } from "vuepress-theme-hope";
 
 export default sidebar({
+  "/categories/miniprogram/": [
+    { text: "原生小程序开发", children: [
+      { text: "开发前准备", link: "native/preparation" },
+      { text: "项目结构详解", link: "native/project-structure" },
+      { text: "基础语法精讲", link: "native/basic-syntax" },
+      { text: "基础组件使用", link: "native/basic-components" },
+      { text: "页面路由与导航", link: "native/page-routing" },
+      { text: "数据请求与处理", link: "native/data-request" },
+      { text: "状态管理", link: "native/state-management" },
+      { text: "组件通信", link: "native/component-communication" },
+      { text: "实战案例", link: "native/practical-cases" },
+    ]},
+    { text: "UniApp跨平台开发", children: [
+      { text: "UniApp简介与环境搭建", link: "uniapp/uniapp-intro" },
+      { text: "项目结构详解", link: "uniapp/project-structure" },
+      { text: "基础语法精讲", link: "uniapp/basic-syntax" },
+      { text: "组件使用", link: "uniapp/components" },
+      { text: "页面路由与导航", link: "uniapp/page-routing" },
+      { text: "数据请求与处理", link: "uniapp/data-request" },
+      { text: "状态管理", link: "uniapp/state-management" },
+      { text: "跨平台适配", link: "uniapp/cross-platform-adaptation" },
+      { text: "性能优化", link: "uniapp/optimization" },
+      { text: "实战案例", link: "uniapp/practical-cases" },
+    ]},
+    { text: "常见问题解决方案", link: "common-problems" },
+  ],
+
   "/categories/frontend/html/": [
     { text: "HTML", icon: "vscode-icons:file-type-html", link: "html/" },
   ],
