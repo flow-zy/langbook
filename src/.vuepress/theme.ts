@@ -12,9 +12,9 @@ export default hopeTheme({
   //   url: "https://mister-hope.com",
   // },
   favicon: "/favicon.ico",
-  logo: "/new-logo.svg",  
+  logo: "/new-logo.svg",
   repo: "https://github.com/flow-zy/langbook.git",
-  
+
   docsDir: "src",
 
   // 导航栏
@@ -22,7 +22,7 @@ export default hopeTheme({
 
   // 侧边栏
   sidebar,
-  fullscreen:true,
+  fullscreen: true,
   // 页脚
   footer: "默认页脚",
   displayFooter: true,
@@ -118,7 +118,7 @@ export default hopeTheme({
   },
   // 在这里配置主题提供的插件
   plugins: {
-    slimsearch:true,
+    slimsearch: true,
     // 注意: 仅用于测试! 你必须自行生成并在生产环境中使用自己的评论服务
     comment: {
       provider: "Giscus",
@@ -187,11 +187,13 @@ export default hopeTheme({
     //     ],
     //   },
     // },
-    photoSwipe:true,
-    seo:true,
-    feed:true,
-    icon:{
-      assets:"https://unpkg.com/iconify-icon@3.0.0/dist/iconify-icon.min.js"
-    }
+    photoSwipe: true,
+    seo: true,
+    feed: true,
+    icon: {
+      assets: "https://unpkg.com/iconify-icon@3.0.0/dist/iconify-icon.min.js",
+    },
+    git: false,
+    pwa: true,
   },
 });
