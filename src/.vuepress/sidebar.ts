@@ -46,6 +46,17 @@ export default sidebar({
     { text: '反射', link: 'reflection' },
     { text: 'Lambda表达式', link: 'lambda-expressions' },
     { text: 'Stream API', link: 'stream-api' },
+    { text: 'Spring Boot', children: [
+      { text: '入门教程', link: 'spring-boot/getting-started' },
+      { text: '配置管理', link: 'spring-boot/configuration' },
+      { text: '自动装配', link: 'spring-boot/auto-configuration' },
+      { text: 'Web开发', link: 'spring-boot/web-development' },
+    ]},
+    { text: 'Spring Cloud', children: [
+      { text: '入门教程', link: 'spring-cloud/getting-started' },
+      { text: '服务注册与发现', link: 'spring-cloud/service-registry' },
+      { text: '配置中心', link: 'spring-cloud/configuration-center' },
+    ]},
   ],
   '/categories/harmony/': [
       { text: '鸿蒙开发简介', link: 'harmony-intro' },
