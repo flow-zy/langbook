@@ -1,6 +1,14 @@
 import { sidebar } from "vuepress-theme-hope";
 
 export default sidebar({
+  '/categories/harmony/': [
+      { text: '鸿蒙开发简介', link: 'harmony-intro' },
+      { text: '开发环境搭建', link: 'environment-setup' },
+      { text: '核心概念', link: 'core-concepts' },
+      { text: '基础API使用', link: 'basic-api' },
+      { text: '实战案例分析', link: 'practical-cases' },
+  ],
+
   "/categories/miniprogram/": [
     { text: "原生小程序开发", children: [
       { text: "开发前准备", link: "native/preparation" },
@@ -154,5 +162,6 @@ export default sidebar({
     { text: "常用API", link: "apis" },
     { text: "高级特性", link: "advanced" },
     { text: "实战项目", link: "project" },
+    { text: "Vue 2 与 Vue 3 对比", link: "vue-comparison" },
   ],
 });
