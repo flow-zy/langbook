@@ -1,10 +1,3 @@
-<!--
- * @FileDescription: 
- * @Author       : zoujunjie
- * @Date         : 2025-08-24 19:59:09
- * @LastEditors  : zoujunjie
- * @LastEditTime : 2025-08-24 21:22:16
--->
 # Spring Cloud 教程
 
 本文件夹包含 Spring Cloud 相关的教程内容。Spring Cloud 是一系列框架的有序集合，它利用 Spring Boot 的开发便利性巧妙地简化了分布式系统基础设施的开发。

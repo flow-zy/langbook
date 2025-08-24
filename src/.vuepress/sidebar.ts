@@ -25,6 +25,23 @@ export default sidebar({
       { text: '常见问题', link: 'express/common-issues' },
     ]},
   ],
+  '/categories/backend/php/': [
+    { text: '学习指南', link: 'index' },
+    { text: '基础语法', link: 'basic-syntax' },
+    { text: '面向对象编程', link: 'oop' },
+    { text: '数组与字符串', link: 'arrays-and-strings' },
+    { text: '文件处理', link: 'file-handling' },
+    { text: '错误处理', link: 'error-handling' },
+    { text: '数据库操作', link: 'database' },
+    { text: 'ThinkPHP框架', children: [
+      { text: '学习指南', link: 'thinkphp/index' },
+      { text: '快速入门', link: 'thinkphp/quick-start' },
+      { text: '核心概念', link: 'thinkphp/core-concepts' },
+      { text: '数据库操作', link: 'thinkphp/database' },
+      { text: '模板引擎', link: 'thinkphp/template-engine' },
+      { text: '表单验证', link: 'thinkphp/form-validation' },
+    ]},
+  ],
   '/categories/backend/java/': [
     { text: '学习指南', link: 'index' },
     { text: '语言基础', link: 'language-basics' },
