@@ -1,6 +1,17 @@
 import { sidebar } from "vuepress-theme-hope";
 
 export default sidebar({
+  '/categories/backend/nodejs/': [
+    { text: '学习指南', link: 'index' },
+    { text: '核心概念', link: 'core-concepts' },
+    { text: '基础语法', link: 'basic-syntax' },
+    { text: '常用模块', link: 'common-modules' },
+    { text: '异步编程模型', link: 'async-programming' },
+    { text: '性能优化', link: 'performance-optimization' },
+    { text: '错误处理', link: 'error-handling' },
+    { text: '生态系统', link: 'ecosystem' },
+    { text: '最佳实践', link: 'best-practices' },
+  ],
   '/categories/harmony/': [
       { text: '鸿蒙开发简介', link: 'harmony-intro' },
       { text: '开发环境搭建', link: 'environment-setup' },
